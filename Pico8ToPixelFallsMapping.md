@@ -10,6 +10,16 @@ This document provides a comprehensive mapping of all Pico-8 engine-supported Lu
 
 ---
 
+## Lifecycle Hooks
+
+| Pico-8 Function | PixelFalls Equivalent | Status | Notes |
+|----------------|----------------------|--------|-------|
+| `_init()` | `init()` | ✅ | Called once on load |
+| `_update()` / `_update60()` | `update()` | ✅ | Logic step |
+| `_draw()` | `draw()` | ✅ | Render step |
+
+---
+
 ## Graphics: Drawing Primitives
 
 | Pico-8 Function | PixelFalls Equivalent | Status | Notes |
@@ -205,16 +215,6 @@ This document provides a comprehensive mapping of all Pico-8 engine-supported Lu
 | `shutdown()` | ❌ | ❌ | Not standard Pico-8 |
 | `extcmd(cmd_str)` | ❌ | ❌ | Editor commands (optional) |
 | `printh(str, [filename], [overwrite], [save_to_desktop])` | `print(...)` | 🔄 | PixelFalls `print()` goes to console only |
-
----
-
-## Lifecycle Hooks
-
-| Pico-8 Function | PixelFalls Equivalent | Status | Notes |
-|----------------|----------------------|--------|-------|
-| `_init()` | `_init()` | ✅ | Called once on load |
-| `_update()` / `_update60()` | `_update()` | ✅ | Logic step |
-| `_draw()` | `_draw()` | ✅ | Render step |
 
 ---
 
